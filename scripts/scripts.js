@@ -11,8 +11,12 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  fetchPlaceholders
 } from './aem.js';
 
+// fetch placeholders from the 'en' folder
+const placeholders = await fetchPlaceholders('en');
+console.log(placeholders)
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
