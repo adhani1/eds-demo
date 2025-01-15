@@ -31,3 +31,69 @@
     order: unset;
   }
 }
+
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #007bff;
+  padding: 0px 2px;
+  margin: 0 4px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: white;
+}
+
+.pagination .prev, .pagination .next {
+  font-weight: bold;
+}
+
+.pagination .disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Make the container a flex container */
+#block-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping of items to the next row */
+  gap: 20px; /* Optional: Add some space between items */
+}
+
+/* Define each block to take up 1/4 of the row (i.e., 4 items per row) */
+.column-wrapper {
+  flex: 1 1 calc(25% - 20px) !important; /* 25% width minus the gap */
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc; /* Optional: Add border for better visualization */
+  text-align: center; /* Optional: Center text inside each block */
+  background-color: #f9f9f9; /* Optional: Add a background color */
+}
+
+/* Optional: Add some styling to the items for better visual appearance */
+.column-wrapper:hover {
+  background-color: #e0e0e0; /* Change background color on hover */
+}
